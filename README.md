@@ -4,8 +4,9 @@ This project implements a Pong game on an OLED screen interface which is connect
 To run this project, make sure to use Vivado 2019.1 as other versions of Vivado are not compatible and have a Zybo Z7 board available. 
 
 ## Overview of C Files
-- `main.c`: Responsible for detecting the "\r#\r" and "\r%\r" termination sequence for displaying the interrupt statistics on the Seven-Segment display and resetting the interrupt variables respectively
-- `uart_driver.c`: Initializes UART, sets up Interrupt System, and implements ISR when a receive or send event of a message is triggered via UART.
+- `main.c`: Used to run the main pong game, controlling the user input for the keypad movements of paddle, move CPU pong paddle and pong ball, and display graphics of the pong game on the OLED screen
+- OLEDControllerCustom.c: Used for OLED functions to interact with the OLED display(i.e. draw lines and pixels, clear screen, update screen, move cursor, etc.)
+- pmodkypd.c: Used for functions to interact with the keypad on the Zybo board
 
 ## Procedure to Run Project
 1. On Vivado, open the xpr file in the hardware folder of repository to create the hardware design for the project.
